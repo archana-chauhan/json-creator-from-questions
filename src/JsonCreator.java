@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  * @author glitzstar
  */
 public class JsonCreator extends javax.swing.JFrame {
-        String ques, a, b, c, d, fact, img, ans, strSave="", fileAndChapterName, chapterArray, options ,finalString; 
+        String ques, a, b, c, d, fact, img, ans, strSave="", fileAndChapterName, chapterArray, optionA, optionB ,finalString; 
         int i=1;
 
     /**
@@ -47,6 +47,8 @@ public class JsonCreator extends javax.swing.JFrame {
         jTextField2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -100,7 +102,9 @@ public class JsonCreator extends javax.swing.JFrame {
 
         jTextField2.setText("Chapter");
 
-        jLabel4.setText("Options");
+        jLabel4.setText("Option A");
+
+        jLabel5.setText("Option B");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -120,15 +124,17 @@ public class JsonCreator extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addComponent(jLabel7)
                             .addComponent(jLabel3)
-                            .addComponent(jLabel4))
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 424, Short.MAX_VALUE)
                             .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField7)
                             .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING))))
-                .addContainerGap(48, Short.MAX_VALUE))
+                            .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.Alignment.LEADING))))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,7 +153,11 @@ public class JsonCreator extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(14, 14, 14)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
@@ -155,7 +165,7 @@ public class JsonCreator extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addGap(61, 61, 61)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton3)
                     .addComponent(jButton4))
@@ -176,7 +186,7 @@ public class JsonCreator extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         pack();
@@ -240,16 +250,18 @@ public class JsonCreator extends javax.swing.JFrame {
         a=jTextField3.getText().toString();
         //b=jTextField2.getText().toString();
         //c=jTextField4.getText().toString();
-        //d=jTextField5.getText().toString();
+        b=jTextField5.getText().toString();
         fileAndChapterName= jTextField2.getText().toString();
         //fact=jTextField6.getText().toString();
         img=jTextField7.getText().toString().toLowerCase();
-        options= jTextField4.getText().toString();
+        optionA= jTextField4.getText().toString();
+        optionB= jTextField5.getText().toString();
+        
         //ans=jTextField8.getText().toString();
         strSave=strSave+"\n\t\t\t{ \n\t\t\t\t\"question\"" + ": "+ "\""+ques + "\",\n" +
         "\t\t\t\t\"answer\"" + ": "+ "\""+a + "\",\n"+
-        "\t\t\t\t\"options\"" + ": "+ "\""+options + "\",\n" +
-        //"\t\t\t\t\"optionC\"" + ": "+ "\""+c + "\",\n" +
+        "\t\t\t\t\"optionA\"" + ": "+ "\""+optionA + "\",\n" +
+        "\t\t\t\t\"optionB\"" + ": "+ "\""+optionB + "\",\n" +
         //"\t\t\t\t\"optionD\"" + ": "+ "\""+d + "\",\n" +
         //"\t\t\t\t\"funFact\"" + ": "+ "\""+fact + "\",\n" +
         "\t\t\t\t\"image\"" + ": "+ "\""+img + "\"\n" +
@@ -259,6 +271,7 @@ public class JsonCreator extends javax.swing.JFrame {
         jTextField1.setText("");
         jTextField3.setText("");
         jTextField4.setText("");
+        jTextField5.setText("");
 
         //                                jTextField2.setText("");
         //                                jTextField4.setText("");
@@ -326,12 +339,14 @@ public class JsonCreator extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }

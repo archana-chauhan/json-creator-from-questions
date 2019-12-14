@@ -1,17 +1,75 @@
 {
-		Chapter1": [
+		"Chapter1":[ 
+
 			{ 
-				"question": "ewhwta?",
-				"answer": "img.png",
-				"image": "tester",
+				"question": "Which shape is this?",
+				"answer": "Circle",
+				"optionA": "(a) Circle",
+				"optionB": "(b) Square",
+				"image": "circle"
+			},
+			{ 
+				"question": "What is the shape of this photo frame?",
+				"answer": "Square",
+				"optionA": "(a) Triangle",
+				"optionB": "(b) Square",
+				"image": "square"
+			},
+			{ 
+				"question": "Which shape is this?",
+				"answer": "Square",
+				"optionA": "(a) Oval",
+				"optionB": "(b) Square",
+				"image": "square"
+			},
+			{ 
+				"question": "What is the shape of this clock?",
+				"answer": "Circle",
+				"optionA": "(a) Circle",
+				"optionB": "(b) rectangle",
+				"image": "circle"
+			},
+			{ 
+				"question": "Which shape is this?",
+				"answer": "Oval",
+				"optionA": "(a) Triangle",
+				"optionB": "(b) Oval",
+				"image": "oval"
+			},
+			{ 
+				"question": "Which shape is this?",
+				"answer": "Square",
+				"optionA": "(a) Rectangle",
+				"optionB": "(b) Square",
+				"image": "square"
+			},
+			{ 
+				"question": "What is the shape of this sign board?",
+				"answer": "Triangle",
+				"optionA": "(a) Triangle",
+				"optionB": "(b) Oval",
+				"image": "triangle"
+			},
+			{ 
+				"question": "What is the shape of a ball?",
+				"answer": "Circle",
+				"optionA": "(a) Circle",
+				"optionB": "(b) Oval",
+				"image": "circle"
+			},
+			{ 
+				"question": "What is the shape of an egg?",
+				"answer": "Oval",
+				"optionA": "(a) Rectangle",
+				"optionB": "(b) Oval",
+				"image": "oval"
+			},
+			{ 
+				"question": "Which shape is this?",
+				"answer": "Triangle",
+				"optionA": "(a) Triangle",
+				"optionB": "(b) Circle",
+				"image": "triangle"
 			}
 		]
-	}{
-		Chapter1": [
-			{ 
-				"question": "sept?",
-				"answer": "img.png",
-				"image": "image",
-			}
-		]
-	}
+}
